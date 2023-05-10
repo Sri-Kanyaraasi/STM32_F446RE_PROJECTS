@@ -1,1 +1,3 @@
-
+HSI stands for High-Speed Internal clock source, which is an on-chip clock source available in STM32F446RE microcontroller. It's an internal oscillator that generates a clock signal using an internal RC circuit.  
+The HSI clock source is useful for applications that don't require high processing speed and don't need precise timing.  The HSI clock can be used as the source for the SYSCLK or as a clock source for peripherals that don't require high-speed operation. However, if the application requires higher processing speed and more accurate timing, the external crystal oscillator or resonator should be used instead of the HSI clock source  
+The HSI (High-Speed Internal) clock source can also be used as the input to the PLL (Phase Locked Loop) module in the STM32F446RE microcontroller to generate the SYSCLK (System Clock), just like the HSE clock source
