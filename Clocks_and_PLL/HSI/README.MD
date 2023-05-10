@@ -1,3 +1,11 @@
-HSI stands for High-Speed Internal clock source, which is an on-chip clock source available in STM32F446RE microcontroller. It's an internal oscillator that generates a clock signal using an internal RC circuit.  
-The HSI clock source is useful for applications that don't require high processing speed and don't need precise timing.  The HSI clock can be used as the source for the SYSCLK or as a clock source for peripherals that don't require high-speed operation. However, if the application requires higher processing speed and more accurate timing, the external crystal oscillator or resonator should be used instead of the HSI clock source  
-The HSI (High-Speed Internal) clock source can also be used as the input to the PLL (Phase Locked Loop) module in the STM32F446RE microcontroller to generate the SYSCLK (System Clock), just like the HSE clock source
+HSE stands for High-Speed External clock source, which is an external crystal oscillator that can be connected to the microcontroller. The HSE clock source can provide a higher frequency than the internal oscillator, which makes it ideal for applications that require high processing speed.   
+The SYSCLK is used as the reference clock for the entire system and controls the speed of the CPU and other peripherals.  
+ Methods to configure the SYSCLK:   
+ 1) First enable the required clock that used and wait untill it is ready   
+ 2) initialize theCPU, AHB and APB clocks according to appication requirement. Do not cross the Maximum limit.  
+ 3) Configure the Flash latency properly by referring to MCU RAM  
+ 4) Select newly enable clock as Sysclock  
+
+STM 32 Cube IDE gives two API'S for handling the clocks. they are :  
+1) HAL_RCC_OscConfig()
+2) HAL_RCC_ClockConfig()
