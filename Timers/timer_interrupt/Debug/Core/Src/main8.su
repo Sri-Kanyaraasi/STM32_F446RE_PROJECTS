@@ -1,0 +1,5 @@
+../Core/Src/main8.c:22:5:main	8	static
+../Core/Src/main8.c:47:6:SystemClockConfig	4	static
+../Core/Src/main8.c:52:6:GPIO_Init	32	static
+../Core/Src/main8.c:61:6:time6_init	8	static
+../Core/Src/main8.c:73:6:Error_Handler	4	static
