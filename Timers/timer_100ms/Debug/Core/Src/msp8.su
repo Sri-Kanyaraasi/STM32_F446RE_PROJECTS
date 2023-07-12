@@ -1,0 +1,2 @@
+../Core/Src/msp8.c:10:6:HAL_MspInit	8	static
+../Core/Src/msp8.c:19:7:HAL_TIM_Base_MspInit	24	static
